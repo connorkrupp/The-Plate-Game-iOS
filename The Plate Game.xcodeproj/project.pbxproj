@@ -16,6 +16,7 @@
 		70D6B2C81DA43BCD00694B14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D6B2C61DA43BCD00694B14 /* LaunchScreen.storyboard */; };
 		70D6B2D31DA43BCD00694B14 /* The_Plate_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B2D21DA43BCD00694B14 /* The_Plate_GameTests.swift */; };
 		70D6B2DE1DA43BCD00694B14 /* The_Plate_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B2DD1DA43BCD00694B14 /* The_Plate_GameUITests.swift */; };
+		70D6B2EE1DA4408500694B14 /* StateData.json in Resources */ = {isa = PBXBuildFile; fileRef = 70D6B2ED1DA4408500694B14 /* StateData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		70D6B2D91DA43BCD00694B14 /* The Plate GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Plate GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D6B2DD1DA43BCD00694B14 /* The_Plate_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Plate_GameUITests.swift; sourceTree = "<group>"; };
 		70D6B2DF1DA43BCD00694B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70D6B2ED1DA4408500694B14 /* StateData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = StateData.json; path = ../StateData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				70D6B2C41DA43BCD00694B14 /* Assets.xcassets */,
 				70D6B2C61DA43BCD00694B14 /* LaunchScreen.storyboard */,
 				70D6B2C91DA43BCD00694B14 /* Info.plist */,
+				70D6B2ED1DA4408500694B14 /* StateData.json */,
 				70D6B2BA1DA43BCD00694B14 /* The_Plate_Game.xcdatamodeld */,
 			);
 			path = "The Plate Game";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70D6B2C81DA43BCD00694B14 /* LaunchScreen.storyboard in Resources */,
+				70D6B2EE1DA4408500694B14 /* StateData.json in Resources */,
 				70D6B2C51DA43BCD00694B14 /* Assets.xcassets in Resources */,
 				70D6B2C31DA43BCD00694B14 /* Main.storyboard in Resources */,
 			);
