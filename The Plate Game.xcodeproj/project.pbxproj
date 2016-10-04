@@ -17,6 +17,8 @@
 		70D6B2D31DA43BCD00694B14 /* The_Plate_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B2D21DA43BCD00694B14 /* The_Plate_GameTests.swift */; };
 		70D6B2DE1DA43BCD00694B14 /* The_Plate_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B2DD1DA43BCD00694B14 /* The_Plate_GameUITests.swift */; };
 		70D6B2EE1DA4408500694B14 /* StateData.json in Resources */ = {isa = PBXBuildFile; fileRef = 70D6B2ED1DA4408500694B14 /* StateData.json */; };
+		70D6B2F01DA4430600694B14 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B2EF1DA4430600694B14 /* SwiftyJSON.swift */; };
+		70D6B2F21DA4436A00694B14 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B2F11DA4436A00694B14 /* CoreDataHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		70D6B2DD1DA43BCD00694B14 /* The_Plate_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Plate_GameUITests.swift; sourceTree = "<group>"; };
 		70D6B2DF1DA43BCD00694B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D6B2ED1DA4408500694B14 /* StateData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = StateData.json; path = ../StateData.json; sourceTree = "<group>"; };
+		70D6B2EF1DA4430600694B14 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		70D6B2F11DA4436A00694B14 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			children = (
 				70D6B2B81DA43BCD00694B14 /* AppDelegate.swift */,
 				70D6B2BD1DA43BCD00694B14 /* MasterViewController.swift */,
+				70D6B2EF1DA4430600694B14 /* SwiftyJSON.swift */,
+				70D6B2F11DA4436A00694B14 /* CoreDataHelpers.swift */,
 				70D6B2BF1DA43BCD00694B14 /* DetailViewController.swift */,
 				70D6B2C11DA43BCD00694B14 /* Main.storyboard */,
 				70D6B2C41DA43BCD00694B14 /* Assets.xcassets */,
@@ -272,9 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70D6B2F21DA4436A00694B14 /* CoreDataHelpers.swift in Sources */,
 				70D6B2BC1DA43BCD00694B14 /* The_Plate_Game.xcdatamodeld in Sources */,
 				70D6B2B91DA43BCD00694B14 /* AppDelegate.swift in Sources */,
 				70D6B2BE1DA43BCD00694B14 /* MasterViewController.swift in Sources */,
+				70D6B2F01DA4430600694B14 /* SwiftyJSON.swift in Sources */,
 				70D6B2C01DA43BCD00694B14 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
