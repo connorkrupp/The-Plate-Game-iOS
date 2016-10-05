@@ -526,6 +526,7 @@
 				70D6B2E41DA43BCD00694B14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70D6B2E51DA43BCD00694B14 /* Build configuration list for PBXNativeTarget "The Plate GameTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +535,7 @@
 				70D6B2E71DA43BCD00694B14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70D6B2E81DA43BCD00694B14 /* Build configuration list for PBXNativeTarget "The Plate GameUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +544,7 @@
 				70D6B2EA1DA43BCD00694B14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
