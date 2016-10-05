@@ -33,9 +33,10 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: Event? {
+    var detailItem: State? {
         didSet {
             // Update the view.
+            print(detailItem)
             self.configureView()
         }
     }

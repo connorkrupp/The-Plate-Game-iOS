@@ -11,72 +11,40 @@ import CoreData
 
 private let stateDataFile = (name: "StateData", type: "json")
 
-func coredata(context: NSManagedObjectContext) {
+func importJSONData(context: NSManagedObjectContext) {
     guard let path = Bundle.main.path(forResource: stateDataFile.name, ofType: stateDataFile.type) else {
         print("Invalid Filename or Path: \(stateDataFile)")
         return
     }
     
     if let json = getJSON(fromPath: path) {
-        let names = json["State"].arrayValue.map({$0.stringValue})
-        let years = json["Year"].arrayValue.map({$0.stringValue})
-        let largestCity = json["LargestCity"].arrayValue.map({$0.stringValue})
-        let area = json["Area"].arrayValue.map({$0.stringValue})
-        let capital = json["Capital"].arrayValue.map({$0.stringValue})
-        let pop = json["Population"].arrayValue.map({$0.stringValue})
-        let elevation = json["Elevation"].arrayValue.map({$0.stringValue})
-        let abbrev = json["Abbreviation"].arrayValue.map({$0.stringValue})
-        let nick = json["Nickname"].arrayValue.map({$0.stringValue})
-        let res = json["ResidentNickname"].arrayValue.map({$0.stringValue})
-        // If appropriate, configure the new managed object.
         
-        
-        var states = [Any]()
-        for index in 0..<names.count {
-            let state = [names[index]: [
-                "year": years[index],
-                "largestCity": largestCity[index],
-                "area": area[index],
-                "elevation": elevation[index],
-                "capital": capital[index],
-                "population": pop[index],
-                "abbreviation": abbrev[index],
-                "nickname": nick[index],
-                "residentNickname": res[index]
-                ]]
-            states.append(state)
-        }
-
-        let dict = ["states": states]
-        var json = JSON(dict)
-        let str = json.description
-        let data = str.data(using: .utf8)!
-        if let file = FileHandle(forUpdatingAtPath:path) {
-            file.write(data)
-        }
-        
-        
-        
-        
-        
-        return
-        for stateData in names {
-            let newState = Event(context: context)
-            
-            newState.name = stateData
-            
-            // Save the context.
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        for (_, value) in json["states"] {
+            if let stateName = value.first?.0 {
+                let newState = State(context: context)
+                newState.name = stateName
+                newState.capital = value.first?.1["capital"].string!
+                newState.abbreviation = value.first?.1["abbreviation"].string!
+                newState.largestCity = value.first?.1["largestCity"].string!
+                newState.residentNickname = value.first?.1["residentNickname"].string!
+                newState.nickname = value.first?.1["nickname"].string!
+               
+                newState.year = (value.first?.1["year"].int16)!
+                newState.area = (value.first?.1["area"].int32)!
+                newState.elevation = (value.first?.1["elevation"].int32)!
+                newState.population = (value.first?.1["population"].int64)!
+                
+                // Save the context.
+                do {
+                    try context.save()
+                } catch {
+                    // Replace this implementation with code to handle the error appropriately.
+                    // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    let nserror = error as NSError
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
             }
-
         }
-        
     }
 }
 
